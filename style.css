@@ -1,0 +1,71 @@
+body {
+  background: linear-gradient(180deg, #0b1020, #2b3350);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 12px;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255,215,0,0.6);
+  font-size: 28px;
+}
+
+canvas {
+  border: 3px solid rgba(255,255,255,0.12);
+  background: linear-gradient(#001, #111);
+  display: block;
+  margin: 12px auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  outline: none;
+}
+
+#ui {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .12s ease, background-color .12s;
+}
+
+button:hover { transform: translateY(-2px); background-color: #fff05a; }
+
+#resultScreen {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: rgba(3, 6, 22, 0.95);
+  border: 2px solid #ffd700;
+  border-radius: 14px;
+  padding: 22px;
+  width: 360px;
+  display: none;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.hidden { display: none; }
+
+/* Small HUD indicators for damage */
+.damage-flash {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(255,0,0,0.12);
+  pointer-events: none;
+  animation: flash .3s linear;
+}
+@keyframes flash {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
